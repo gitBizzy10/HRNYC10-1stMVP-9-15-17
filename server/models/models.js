@@ -6,11 +6,12 @@ module.exports = {
 
     get: function(callback) {
            //query of what I want to select from my database
-           var query = 'select * from restaurants'
+           var query = 'SELECT * FROM Restaurants'
            //queries the database for the query above, then runs a function
-           db.query(query, function(results){
+           db.query(query, function(err, results){
              //uses the callback passed in on results
-             callback(results)
+             console.log(results)
+             callback(err, results)
            });
     },
 
@@ -18,4 +19,4 @@ module.exports = {
 
     }
   }
-}
+};

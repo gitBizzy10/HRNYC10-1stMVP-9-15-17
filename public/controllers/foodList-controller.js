@@ -6,3 +6,12 @@ var foodArray = []
       console.log(foodArray);
     }
   })
+  .component('foodList', {
+
+    bindings: {
+      food: '<',
+    },
+    controller: 'Food List',
+    templateURL: 'public/views/foodList-view.html'
+    }
+});

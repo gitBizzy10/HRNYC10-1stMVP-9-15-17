@@ -1,14 +1,14 @@
-var mysql =  require('mysql')
+var mysql =  require('mysql');
 
 var connection = mysql.createConnection({
   user: 'root',
-  pw: '',
+  password: '',
   database: 'foods'
-})
+});
 
-connection.connect
+connection.connect();
 
-module.exports = connection
+module.exports = connection;
 
 
 

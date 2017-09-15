@@ -10,10 +10,13 @@ module.exports = {
 
     get: function(req, res) {
       //call on model.get, pass in the results obtained
-      models.models.get( function(results) {
+      models.models.get( function(err, results) {
+        if (err){
+          console.error('err');
+        }
         //send results as a json
         res.json(results)
-      })
+      });
     },
 
     post: function(req, res) {
@@ -22,4 +25,4 @@ module.exports = {
 
     }
   }
-}
+};
